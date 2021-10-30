@@ -1,0 +1,168 @@
+$background-primary: #161919;
+$primary-text-color: #FFFFFF;
+$header-font: 'Netflix Sans','Helvetica Neue','Arial','sans-serif';
+$subtitle-font: 'Netflix Sans','Helvetica Neue','Arial','sans-serif';
+
+body {
+    background-color: $background-primary;
+    color: $primary-text-color;
+}
+
+.pageContainer {
+    margin: 40px 20px;
+    text-align: center;
+
+    .header {
+        h1 {
+            font-family: $header-font;
+            font-size: 65px;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-family: $header-font;
+            font-size: 35px;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 20px;
+            font-family: $subtitle-font;
+        }
+    }
+
+    .content {
+        width: 100%;
+        margin: 40px 0px;
+    
+        .movie-list {
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+    
+            .item {
+                list-style: none;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                transition: 0.3s;
+                display: inline-block;
+
+                img {
+                    height: 300px;
+                    border-radius: 4px;
+                }
+
+                .title {
+                    width: 200px;
+                    min-height: 60px;
+                    font-size: 18px;
+                    text-align: start;
+                    font-family: $header-font;
+                }
+
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+.modal {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgba($color: #000000, $alpha: 0.4);
+    overflow: hidden;
+    padding: 100px 0px;
+    text-align: center;
+
+    .modal-body {
+        background: #fefefe;
+        border: #eee solid 1px;
+        border-radius: 10px;
+        margin: auto;
+        z-index: 11;
+        padding: 20px;
+        margin: 10px 2rem;
+
+        @media screen {
+            
+        }
+    }
+
+    h1 {
+        color: $background-primary;
+        font-family: $header-font;
+    }
+
+    p {
+        color: $background-primary;
+        font-family: $subtitle-font;
+    }
+
+    button {
+        background: $background-primary;
+        color: $primary-text-color;
+        padding: 10px 20px;
+        border: 0px;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: 0.3s;
+        opacity: 1;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
+
+.searchbar {
+    width: 100%;
+    margin-top: 40px;
+
+    input {
+        width: 30%;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+        padding: 3px 4px;
+        font-family: $subtitle-font;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100px;
+        height: 30px;
+        background: $primary-text-color;
+        color: $background-primary;
+        border: none;
+        border-radius: 4px;
+        opacity: 1;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
